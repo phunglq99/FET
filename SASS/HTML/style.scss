@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+// Position
+.bar {
+  width: 20rem;
+  height: 0.5rem;
+  background: rgba(214, 199, 199, 0.692);
+  border-radius: 2rem;
+  margin: 10rem auto 0;
+  position: relative;
+  &-progress {
+    width: 70%;
+    height: 0.5rem;
+    background: rgba(245, 20, 20, 0.692);
+    border-radius: inherit;
+  }
+  &-circle {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: green;
+    border-radius: inherit;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* --------------------------*/
+// Before and after
+.title {
+  position: relative;
+  padding-left: 20px;
+  margin: 5rem;
+}
+.title::before {
+  content: ' ';
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgb(226, 30, 30);
+  border-radius: 2rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+//
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: red;
+  position: relative;
+
+  &-F8 {
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+//
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 5rem auto;
+  color: red;
+  position: relative;
+  &::before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+  }
+  &-user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//hover before
+.effect {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  //   border: 1px solid blue;
+  border-radius: 2rem;
+  background-color: red;
+  color: black;
+  margin: 2rem;
+  transition: all 0.3s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    // transform: skew(-45deg);
+    background-color: orange;
+    border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s linear;
+
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+.box {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 5rem;
+  background-color: orange;
+  transform: skew(-50%);
+}

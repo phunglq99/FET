@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+}
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+//
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+//button p2045
+.button {
+  padding: 20px 45px;
+  color: $gray-dark;
+  background-color: transparent;
+  border-radius: 10px;
+  line-height: normal;
+  outline: none;
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+  }
+  &--outline {
+    border: 1px solid;
+    color: $gray-blur;
+  }
+}
