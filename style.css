@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: white;
+  color: #272e35;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 20px 45px;
+  color: #272e35;
+  background-color: transparent;
+  border-radius: 10px;
+  line-height: normal;
+  outline: none;
+}
+.button--primary {
+  background-color: #579aff;
+  color: white;
+}
+.button--outline {
+  border: 1px solid;
+  color: #a5b2c3;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 85px;
+}
+.block-caption {
+  color: #a5b2c3;
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.block-caption::before {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+.block-caption::after {
+  right: 0;
+  transform: translate(100%, -50%);
+}
+.block-caption::before, .block-caption::after {
+  content: "";
+  position: absolute;
+  background-color: #579aff;
+  width: 20px;
+  height: 2px;
+  top: 50%;
+}
+.block-heading {
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 1.4;
+}
+.block-heading span {
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.header-logo_image {
+  margin-right: 70px;
+}
+.header-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.header-menu_item {
+  margin-left: 72px;
+}
+.header-menu_link {
+  color: #272e35;
+  font-weight: bold;
+  transition: all 0.25s ease-in-out;
+}
+.header-menu_link:hover {
+  color: #579aff;
+}
+.header-auth {
+  margin-left: auto;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.banner-info {
+  width: 40%;
+}
+.banner-image {
+  width: 60%;
+  transform: scale(1.2);
+}
+.banner-heading {
+  font-size: 50px;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+.banner-heading span {
+  display: block;
+}
+.banner-desc {
+  margin-bottom: 50px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+}
+.banner-links .button:first-child {
+  margin-right: 40px;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+.work {
+  padding-top: 95px;
+}
+
+/*# sourceMappingURL=style.css.map */

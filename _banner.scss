@@ -1,0 +1,33 @@
+.banner {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  &-info {
+    width: 40%;
+  }
+  &-image {
+    width: 60%;
+    transform: scale(1.2);
+  }
+  &-heading {
+    font-size: 50px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    span {
+      display: block;
+    }
+  }
+  &-desc {
+    margin-bottom: 50px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: black;
+  }
+  &-links {
+    .button:first-child {
+      margin-right: 40px;
+      padding-left: 20px;
+      padding-right: 25px;
+    }
+  }
+}

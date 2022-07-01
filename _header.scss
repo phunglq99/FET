@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+
+  &-logo_image {
+    margin-right: 70px;
+  }
+  &-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &_item {
+      margin-left: 72px;
+    }
+    &_link {
+      color: $gray-dark;
+      font-weight: bold;
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-auth {
+    margin-left: auto;
+  }
+}
