@@ -14,7 +14,7 @@ body {
 a {
   text-decoration: none;
 }
-ul{
+ul {
   list-style: none;
 }
 img {
@@ -32,7 +32,7 @@ img {
   padding: 0 15px;
   margin: 0 auto;
 }
-//button 
+//button
 .button {
   display: inline-block;
   padding: 20px 45px;
@@ -88,25 +88,25 @@ img {
   }
 
   // left
-  &-caption_left{
+  &-caption_left {
     padding-left: 40px;
-    &::before{
+    &::before {
       transform: none;
       width: 30px;
       top: 50%;
     }
-    &::after{
+    &::after {
       display: none;
     }
   }
 
   //center
-  &-caption_center{
-    &::before{
+  &-caption_center {
+    &::before {
       width: 30px;
       margin-left: -10px;
     }
-    &::after{
+    &::after {
       width: 30px;
       margin-right: -10px;
     }
@@ -121,8 +121,19 @@ img {
     }
   }
 }
-.text{
+.text {
   line-height: 1.5;
-    font-weight: 300;
-    color: $gray;
+  font-weight: 300;
+  color: $gray;
+}
+.bg {
+  &-google {
+    background-color: #ff7979;
+  }
+  &-twitter {
+    background-color: #79afff;
+  }
+  &-instagram {
+    background-color: #ffb979;
+  }
 }

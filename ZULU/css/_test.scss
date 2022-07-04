@@ -1,0 +1,12 @@
+.test {
+  background-color: black;
+  height: 10rem;
+  width: 10rem;
+  margin: 0 auto;
+  &::before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+  }
+}
