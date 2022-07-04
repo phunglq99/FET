@@ -10,10 +10,12 @@
     <title>Zulu LandingPage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
+        <!-- Header -->
         <header class="header">
           <!-- Header-logo -->
           <a href="index.html" class="header-logo_image">
@@ -47,7 +49,7 @@
               <span>Make a</span> <span>big impact</span>
               <span>with exciting</span> videos
             </h1>
-            <p class="banner-desc">
+            <p class="banner-desc text">
               Lorem ipsum dolor sit amet consectetur, adipisicing
               elit. Repellendus omnis laboriosam incidunt est itaque
             </p>
@@ -62,6 +64,7 @@
           </div>
           <img src="../img/banner.png" alt="" class="banner-image" />
         </section>
+
         <!-- Work -->
         <section class="work">
           <div class="block">
@@ -71,6 +74,7 @@
             </h2>
           </div>
           <div class="work-list">
+            <!-- 70*2(cột)=140; 140/3 (khoảng trống)= 46.47 -->
             <div class="work-item">
               <img
                 src="../img/img-work1.png"
@@ -80,14 +84,14 @@
               <h3 class="work-title">
                 Offer the best viewing experience.
               </h3>
-              <p class="work-desc">
+              <p class="work-desc text">
                 Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Vitae explicabo dolore aliquam, illo et
                 distinctio maiores laboriosam dolorem! Illo quos id
                 possimus deserunt facere provident architecto
                 voluptate perferendis asperiores tempora?
               </p>
-              <a href="#" class="button button--outline"
+              <a href="#" class="button button--outline work-more"
                 >Learn more</a
               >
             </div>
@@ -100,14 +104,14 @@
               <h3 class="work-title">
                 Offer the best viewing experience.
               </h3>
-              <p class="work-desc">
+              <p class="work-desc text">
                 Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Vitae explicabo dolore aliquam, illo et
                 distinctio maiores laboriosam dolorem! Illo quos id
                 possimus deserunt facere provident architecto
                 voluptate perferendis asperiores tempora?
               </p>
-              <a href="#" class="button button--outline"
+              <a href="#" class="button button--outline work-more"
                 >Learn more</a
               >
             </div>
@@ -120,17 +124,240 @@
               <h3 class="work-title">
                 Offer the best viewing experience.
               </h3>
-              <p class="work-desc">
+              <p class="work-desc text">
                 Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Vitae explicabo dolore aliquam, illo et
                 distinctio maiores laboriosam dolorem! Illo quos id
                 possimus deserunt facere provident architecto
                 voluptate perferendis asperiores tempora?
               </p>
-              <a href="#" class="button button--outline"
+              <a href="#" class="button button--outline work-more"
                 >Learn more</a
               >
             </div>
+          </div>
+        </section>
+
+        <!-- Intro -->
+        <section class="intro">
+          <div class="intro-content">
+            <span class="block-caption block-caption_left"> Zulu Studio </span>
+            <h2 class="block-heading">
+              <span>From our </span><span>studio to your</span> screen
+            </h2>
+            <p class="text intro-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum commodi impedit velit unde id nihil ad modi, cupiditate tempora voluptatibus labore recusandae temporibus distinctio sapiente asperiores soluta aut laudantium. Laudantium.
+            </p>
+            <div class="intro-link">
+              <a href="#" class="button button--primary">Explore more</a>
+            </div>
+          </div>
+          <img src="../img/img-intro.png" alt="" class="intro-image">
+        </section>
+
+        <!--Plan  -->
+        <section class="plan">
+          <div class="block">
+            <span class="block-caption block-caption_center"> Pricing </span>
+            <h2 class="block-heading">
+              <span>Select the </span><span>perfect plan</span>
+            </h2>
+          </div>
+          <ul class="plan-list">
+            <li class="plan-item">
+               <h3 class="plan-name">Basic</h3>
+               <h4 class="plan-price">
+                  <sup class="plan-price_symbol">$</sup>
+                  <span class="plan-price_month">9</span>
+                  <span>/Month</span>
+                </h4>
+                <p class="plan-desc text">Beautifully simple project planning</p>
+                <h4 class="plan-feature">Feature</h4>
+                <div class="plan-feature_item">
+                  <i class="fa fa-check-circle plan-feature_icon">
+                  </i>
+                  <span class="plan-feature_title">
+                    7 HD720 videos per month
+                  </span>
+                </div>
+                 <div class="plan-feature_item">
+                  <i class="fa fa-check-circle plan-feature_icon">
+                  </i>
+                  <span class="plan-feature_title">
+                    7 HD720 videos per month
+                  </span>
+                </div>
+                <div class="plan-feature_item">
+                  <i class="fa fa-check-circle plan-feature_icon">
+                  </i>
+                  <span class="plan-feature_title">
+                    7 HD720 videos per month
+                  </span>
+                </div>
+                <div class="plan-feature_item">
+                  <i class="fa fa-check-circle plan-feature_icon">
+                  </i>
+                  <span class="plan-feature_title">
+                    7 HD720 videos per month
+                  </span>
+                </div>
+                <a href="#" class="button button--outline plan-start">Start now</a>
+            </li>
+            <li class="plan-item">
+              <div class="plan-label">
+                most popular
+              </div>
+              <h3 class="plan-name">Premium</h3>
+              <h4 class="plan-price">
+                 <sup class="plan-price_symbol">$</sup>
+                 <span class="plan-price_month">49</span>
+                 <span>/Month</span>
+               </h4>
+               <p class="plan-desc text">Beautifully simple project planning</p>
+               <h4 class="plan-feature">Feature</h4>
+               <div class="plan-feature_item">
+                 <i class="fa fa-check-circle plan-feature_icon">
+                 </i>
+                 <span class="plan-feature_title">
+                   7 HD720 videos per month
+                 </span>
+               </div>
+                <div class="plan-feature_item">
+                 <i class="fa fa-check-circle plan-feature_icon">
+                 </i>
+                 <span class="plan-feature_title">
+                   7 HD720 videos per month
+                 </span>
+               </div>
+               <div class="plan-feature_item">
+                 <i class="fa fa-check-circle plan-feature_icon">
+                 </i>
+                 <span class="plan-feature_title">
+                   7 HD720 videos per month
+                 </span>
+               </div>
+               <div class="plan-feature_item">
+                 <i class="fa fa-check-circle plan-feature_icon">
+                 </i>
+                 <span class="plan-feature_title">
+                   7 HD720 videos per month
+                 </span>
+               </div>
+               <div class="plan-feature_item">
+                <i class="fa fa-check-circle plan-feature_icon">
+                </i>
+                <span class="plan-feature_title">
+                  7 HD720 videos per month
+                </span>
+              </div>
+              <div class="plan-feature_item">
+                <i class="fa fa-check-circle plan-feature_icon">
+                </i>
+                <span class="plan-feature_title">
+                  7 HD720 videos per month
+                </span>
+              </div>
+              <div class="plan-feature_item">
+                <i class="fa fa-check-circle plan-feature_icon">
+                </i>
+                <span class="plan-feature_title">
+                  7 HD720 videos per month
+                </span>
+              </div>
+              <div class="plan-feature_item">
+                <i class="fa fa-check-circle plan-feature_icon">
+                </i>
+                <span class="plan-feature_title">
+                  7 HD720 videos per month
+                </span>
+              </div>
+               <a href="#" class="button button--outline plan-start">Start now</a>
+           </li>
+           <li class="plan-item">
+            <h3 class="plan-name">Business</h3>
+            <h4 class="plan-price">
+               <sup class="plan-price_symbol">$</sup>
+               <span class="plan-price_month">29</span>
+               <span>/Month</span>
+             </h4>
+             <p class="plan-desc text">Beautifully simple project planning</p>
+             <h4 class="plan-feature">Feature</h4>
+             <div class="plan-feature_item">
+               <i class="fa fa-check-circle plan-feature_icon">
+               </i>
+               <span class="plan-feature_title">
+                 7 HD720 videos per month
+               </span>
+             </div>
+              <div class="plan-feature_item">
+               <i class="fa fa-check-circle plan-feature_icon">
+               </i>
+               <span class="plan-feature_title">
+                 7 HD720 videos per month
+               </span>
+             </div>
+             <div class="plan-feature_item">
+               <i class="fa fa-check-circle plan-feature_icon">
+               </i>
+               <span class="plan-feature_title">
+                 7 HD720 videos per month
+               </span>
+             </div>
+             <div class="plan-feature_item">
+               <i class="fa fa-check-circle plan-feature_icon">
+               </i>
+               <span class="plan-feature_title">
+                 7 HD720 videos per month
+               </span>
+             </div>
+             <div class="plan-feature_item">
+              <i class="fa fa-check-circle plan-feature_icon">
+              </i>
+              <span class="plan-feature_title">
+                7 HD720 videos per month
+              </span>
+            </div>
+            <div class="plan-feature_item">
+              <i class="fa fa-check-circle plan-feature_icon">
+              </i>
+              <span class="plan-feature_title">
+                7 HD720 videos per month
+              </span>
+            </div>
+            <div class="plan-feature_item">
+              <i class="fa fa-check-circle plan-feature_icon">
+              </i>
+              <span class="plan-feature_title">
+                7 HD720 videos per month
+              </span>
+            </div>
+             <a href="#" class="button button--outline plan-start">Start now</a>
+         </li>
+          </ul>
+          
+        </section>
+
+        <!-- Client -->
+        <section class="client">
+          <div class="block">
+            <span class="block-caption block-caption_center"> What people say </span>
+            <h2 class="block-heading">
+              <span>Our honorable </span><span>clients</span>
+            </h2>
+          </div>
+          <div class="client-list">
+            <div class="client-list_item">
+                <img src="https://source.unsplash.com/random" alt="" class="client-image">
+                <h3 class="client-name">
+                  Edwin Reyes
+                </h3>
+                <p class="client-position">Businessman</p>
+                <p class="client-desc text">
+                  
+                </p>
+            </div>
+            <div class="client-list_item"></div>
+            <div class="client-list_item"></div>
           </div>
         </section>
       </div>

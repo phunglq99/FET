@@ -17,7 +17,11 @@ a {
   text-decoration: none;
 }
 
-.img {
+ul {
+  list-style: none;
+}
+
+img {
   max-width: 100%;
   display: block;
 }
@@ -34,12 +38,14 @@ a {
 }
 
 .button {
+  display: inline-block;
   padding: 20px 45px;
   color: #272e35;
   background-color: transparent;
   border-radius: 10px;
   line-height: normal;
   outline: none;
+  transition: all 0.2s linear;
 }
 .button--primary {
   background-color: #579aff;
@@ -56,6 +62,7 @@ a {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 85px;
+  text-align: center;
 }
 .block-caption {
   color: #a5b2c3;
@@ -78,16 +85,41 @@ a {
   position: absolute;
   background-color: #579aff;
   width: 20px;
-  height: 2px;
+  height: 1px;
   top: 50%;
 }
+.block-caption_left {
+  padding-left: 40px;
+}
+.block-caption_left::before {
+  transform: none;
+  width: 30px;
+  top: 50%;
+}
+.block-caption_left::after {
+  display: none;
+}
+.block-caption_center::before {
+  width: 30px;
+  margin-left: -10px;
+}
+.block-caption_center::after {
+  width: 30px;
+  margin-right: -10px;
+}
 .block-heading {
-  text-transform: uppercase;
   font-size: 50px;
   line-height: 1.4;
+  font-weight: 600;
 }
 .block-heading span {
   display: block;
+}
+
+.text {
+  line-height: 1.5;
+  font-weight: 300;
+  color: #868d93;
 }
 
 .header {
@@ -139,9 +171,6 @@ a {
 }
 .banner-desc {
   margin-bottom: 50px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: black;
 }
 .banner-links .button:first-child {
   margin-right: 40px;
@@ -151,6 +180,205 @@ a {
 
 .work {
   padding-top: 95px;
+  padding-bottom: 50px;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 70px;
+}
+.work-item {
+  padding: 40px 30px;
+  border-radius: 14px;
+  border: 1px solid #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.2 linear;
+}
+.work-item:hover {
+  border-color: transparent;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.05);
+}
+.work-more {
+  transition: all 0.2 linear;
+}
+.work-item:hover .work-more {
+  background-color: #579aff;
+  border-color: #579aff;
+  color: white;
+}
+.work-image {
+  max-height: 115px;
+  margin-bottom: 35px;
+}
+.work-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.work-desc {
+  font-weight: 300;
+  margin-bottom: 35px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
+  word-break: break-word;
+  color: #868d93;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  padding: 110px 0 160px;
+}
+.intro > * {
+  width: 50%;
+}
+.intro-content {
+  padding-right: 130px;
+}
+.intro-desc {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
+  word-break: break-word;
+}
+
+.plan {
+  padding-bottom: 175px;
+}
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 45px;
+}
+.plan-item {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 75px 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.plan-item:hover {
+  border-color: transparent;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.05);
+}
+.plan-item:hover .plan-start {
+  background-color: #579aff;
+  color: white;
+  border-color: #579aff;
+}
+.plan-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #ff858d;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 0 20px;
+  font-size: 14px;
+}
+.plan-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.plan-price {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+.plan-price_symbol {
+  vertical-align: top;
+  font-weight: 600;
+}
+.plan-price_month {
+  font-weight: 500;
+  font-size: 40px;
+}
+.plan-desc {
+  margin-bottom: 55px;
+}
+.plan-feature {
+  font-size: 20px;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+.plan-feature_item {
+  display: flex;
+  align-items: center;
+  color: #868d93;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+.plan-feature_item:last-of-type {
+  margin-bottom: 75px;
+}
+.plan-feature_icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.plan-start {
+  display: block;
+  margin: auto auto 0;
+  width: max-content;
+}
+
+.client {
+  padding-bottom: 175px;
+}
+.client-list {
+  display: flex;
+}
+.client-list_item {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 45px 25px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+.client-list_item:not(:first-child) {
+  margin-left: 70px;
+}
+.client-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 100rem;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.client-name {
+  font-weight: 500;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.client-position {
+  color: #868d93;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 /*# sourceMappingURL=style.css.map */

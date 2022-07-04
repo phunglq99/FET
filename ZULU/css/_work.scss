@@ -1,6 +1,62 @@
 .work {
   padding-top: 95px;
+  padding-bottom: 50px;
   &-list {
-    display: flex;
+    // display: flex;
+    // justify-content: space-between;
+    // 70*2 = 140
+    // 140/3 = 46.67
+
+    // grid
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 70px;
+  }
+  &-item{
+    // width: calc(33.33% - 46.67px)
+    padding: 40px 30px;
+    border-radius: 14px;
+    border: 1px solid $gray-light;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align: center;
+    transition: all 0.2 linear;
+    &:hover{
+      border-color: transparent ;
+      box-shadow: 0 0 50px 10px rgba(#000000, 0.05);
+    }
+  }
+  &-more{
+    transition: all 0.2 linear;
+  }
+  &-item:hover .work-more{
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: white;
+  }
+
+  &-image{
+    max-height:115px;
+    margin-bottom:35px;
+  }
+  &-title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom:30px
+  }
+  &-desc{
+    font-weight: 300;
+    margin-bottom: 35px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    width: 100%;
+    word-break: break-word;
+    color: $gray;
   }
 }

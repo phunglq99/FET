@@ -1,0 +1,27 @@
+.intro{
+    display: flex;
+    align-items: center;
+    padding: 110px 0 160px ;
+    & > *{
+        width: 50%;
+    }
+    &-content{    
+        padding-right: 130px;
+    }
+    &-image{
+       
+    }
+    &-desc{
+        margin-bottom: 30px;
+        margin-top: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        width: 100%;
+        word-break: break-word;
+    }
+}
+

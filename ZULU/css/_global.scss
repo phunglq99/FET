@@ -14,7 +14,10 @@ body {
 a {
   text-decoration: none;
 }
-.img {
+ul{
+  list-style: none;
+}
+img {
   max-width: 100%;
   display: block;
 }
@@ -29,14 +32,17 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
-//button p2045
+//button 
 .button {
+  display: inline-block;
   padding: 20px 45px;
   color: $gray-dark;
   background-color: transparent;
   border-radius: 10px;
   line-height: normal;
   outline: none;
+  transition: all 0.2s linear;
+
   &--primary {
     background-color: $primary-color;
     color: white;
@@ -52,6 +58,8 @@ a {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 85px;
+  text-align: center;
+
   &-caption {
     color: $gray-blur;
     position: relative;
@@ -67,22 +75,54 @@ a {
       right: 0;
       transform: translate(100%, -50%);
     }
+    // all
     &::before,
     &::after {
       content: '';
       position: absolute;
       background-color: $primary-color;
       width: 20px;
-      height: 2px;
+      height: 1px;
       top: 50%;
     }
   }
+
+  // left
+  &-caption_left{
+    padding-left: 40px;
+    &::before{
+      transform: none;
+      width: 30px;
+      top: 50%;
+    }
+    &::after{
+      display: none;
+    }
+  }
+
+  //center
+  &-caption_center{
+    &::before{
+      width: 30px;
+      margin-left: -10px;
+    }
+    &::after{
+      width: 30px;
+      margin-right: -10px;
+    }
+  }
   &-heading {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 50px;
     line-height: 1.4;
+    font-weight: 600;
     span {
       display: block;
     }
   }
+}
+.text{
+  line-height: 1.5;
+    font-weight: 300;
+    color: $gray;
 }
