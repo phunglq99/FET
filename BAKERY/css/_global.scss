@@ -38,18 +38,61 @@ img {
   background-color: transparent;
   padding: 13px 45px;
   border-radius: 100rem;
-  color: $black;
   font-weight: 600;
+  color: $black;
+  transition: all 0.2s linear;
+
   &--outline {
     border: none;
   }
   &--danger {
     border: 1px solid $red;
     color: $red;
-    transition: all 0.25 linear;
     &:hover {
       background-color: $red;
       color: white;
     }
   }
 }
+
+/**
+test code hover image
+.bg-image--hover2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url(https://images.unsplash.com/photo-1656936611703-a1ede070073c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  // display: none;
+  min-height: 60vh;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+    opacity: 0.7;
+    z-index: 3;
+  }
+}
+.banne {
+  position: relative;
+  min-height: 60vh;
+  background-image: url(https://images.unsplash.com/photo-1509473332032-f1ce823d92c4?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3e2410208e8f8a78e4aa3550fddfbb44);
+  background-size: cover;
+  display: flex;
+}
+.banne::after {
+  content: ''; // ::before and ::after both require content
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #fdfcfc8f, #ffffffa8);
+  opacity: 0.7;
+}
+ */

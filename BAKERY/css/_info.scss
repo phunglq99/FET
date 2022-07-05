@@ -1,0 +1,41 @@
+.info {
+  padding: 37.21px 0;
+  box-shadow: 0px 40px 70px -20px rgba($black, 0.1);
+  border-radius: 10px;
+  margin-bottom: 95px;
+  &_list {
+    display: flex;
+    justify-content: center;
+    &--item {
+      width: 33.33%;
+      display: flex;
+      justify-content: center;
+      padding: 35px 0;
+    }
+    &--item:not(:first-child) {
+      border-left: 1px solid #eeeff2;
+    }
+    &--item:nth-child(2) {
+      width: calc(100% - 710px);
+    }
+  }
+  &--icon {
+    padding: 20px;
+    color: $red;
+    background-color: $red-blur;
+    border-radius: 10rem;
+  }
+  &_list--title {
+    text-align: center;
+    margin-left: 36.5px;
+    font-size: 20px;
+    color: $black-blur;
+    span {
+      display: block;
+      color: $black;
+      font-size: 25px;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+  }
+}

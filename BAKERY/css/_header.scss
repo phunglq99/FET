@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 89px;
   &_logo--link {
     display: flex;
     justify-content: center;
@@ -37,3 +38,26 @@
     }
   }
 }
+// .bg-image {
+//   &--hover1 {
+//     width: 100%;
+//     height: 500px;
+//     &:hover {
+//       background-image: url('https://images.unsplash.com/photo-1656936611703-a1ede070073c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+// background-repeat: no-repeat;
+// background-size: cover;
+// background-position: center;
+// width: 100%;
+// height: 500px;
+//     }
+//   }
+// }
+
+// .bg-image1 {
+//   position: relative;
+//   &:hover .bg-image--hover2 {
+//     display: inline-block;
+//     // position: relative;
+//     z-index: 2;
+//   }
+// }
