@@ -2,6 +2,7 @@
   padding-bottom: 175px;
   &-list {
     display: flex;
+    padding-bottom: 60px;
     // justify-content: space-between;
     &_item {
       // width: calc(33.33% - 46.67px);
@@ -60,4 +61,22 @@
       font-size: 20px;
     }
   }
+}
+// slick
+.icon-prevArrow,
+.icon-nextArrow {
+  color: $primary-color;
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-top: 100px;
+  cursor: pointer;
+}
+.icon-prevArrow {
+  transform: translateX(-50px);
+}
+.slick-slider button {
+  border: none;
+  background-color: white;
 }

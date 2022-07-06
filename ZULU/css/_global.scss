@@ -137,3 +137,20 @@ img {
     background-color: #ffb979;
   }
 }
+@media screen and (max-width: 767px) {
+  .button {
+    padding: 13px 15px;
+  }
+  .block {
+    margin-bottom: 50px;
+    &-heading {
+      font-size: 30px;
+      span {
+        display: unset;
+      }
+    }
+    &-caption {
+      margin-bottom: 20px;
+    }
+  }
+}

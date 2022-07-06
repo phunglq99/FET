@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-
+  padding-top: 40px;
   &-logo_image {
     margin-right: 70px;
   }
@@ -24,5 +24,37 @@
 
   &-auth {
     margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    &-logo_image {
+      margin-right: 0;
+    }
+    &-menu {
+      margin: 0 auto;
+    }
+    &-auth {
+      margin-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header {
+    &-menu {
+      display: none;
+    }
+    &-auth {
+      margin-left: auto;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 20px;
+    &-logo {
+      max-width: 90px;
+    }
   }
 }

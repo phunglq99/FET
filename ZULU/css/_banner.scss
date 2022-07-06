@@ -12,6 +12,7 @@
   &-heading {
     font-size: 50px;
     margin-bottom: 40px;
+    font-weight: 800;
     line-height: 1.4;
     span {
       display: block;
@@ -25,6 +26,46 @@
       margin-right: 40px;
       padding-left: 20px;
       padding-right: 25px;
+    }
+  }
+  @media screen and (max-width: 1279.98px) {
+    padding-top: 30px;
+    &-heading {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+    &-desc {
+      margin-bottom: 30px;
+    }
+    &-links {
+      .button {
+        padding: 15px 20px;
+      }
+      .button:first-child {
+        margin-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    flex-direction: column;
+    & > * {
+      width: 100%;
+    }
+    &-image {
+      transform: none;
+      margin-top: 25px;
+    }
+    &-heading {
+      span {
+        display: unset;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-heading {
+      font-size: 30px;
     }
   }
 }

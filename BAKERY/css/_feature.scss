@@ -1,0 +1,21 @@
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin-bottom: 131px;
+  & > * {
+    width: calc(50% - 85px);
+  }
+  &_info--title {
+    font-weight: 600;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+  &_info--desc {
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 20px;
+    color: $black-blur;
+  }
+}

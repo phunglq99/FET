@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
   background-color: white;
   color: $black;
 }
@@ -54,7 +54,23 @@ img {
     }
   }
 }
-
+//block
+.block {
+  &_lists--item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 21px;
+    i {
+      color: #2fab73;
+      font-size: 20px;
+      padding-right: 10px;
+    }
+  }
+  &_lists--link {
+    font-size: 14px;
+    color: $black-blur;
+  }
+}
 /**
 test code hover image
 .bg-image--hover2 {
