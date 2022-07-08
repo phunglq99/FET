@@ -21,7 +21,9 @@
       }
     }
   }
-
+  .menu-toggle {
+    display: none;
+  }
   &-auth {
     margin-left: auto;
   }
@@ -47,6 +49,9 @@
     }
     &-auth {
       margin-left: auto;
+    }
+    .menu-toggle {
+      display: unset;
     }
   }
 }

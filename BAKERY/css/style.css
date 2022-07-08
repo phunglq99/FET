@@ -6,7 +6,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: white;
@@ -225,6 +225,8 @@ test code hover image
   width: calc(100% - 710px);
 }
 .info--icon {
+  max-height: 55px;
+  max-width: 55px;
   padding: 20px;
   color: #f53855;
   background-color: #ffecec;
@@ -267,7 +269,7 @@ test code hover image
 }
 
 .plan {
-  padding-top: 80px;
+  padding: 80px 0 150px;
   text-align: center;
 }
 .plan_title {
@@ -282,12 +284,11 @@ test code hover image
   color: #4f5665;
 }
 .plan_lists {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
 }
 .plan_lists--item {
-  width: calc(33.33% - 33.33px);
   padding: 80px 70px 50px;
   border: 2px solid #dddddd;
   border-radius: 10px;
@@ -297,17 +298,154 @@ test code hover image
 }
 .plan_lists--price {
   padding-top: 28px;
+  margin: auto;
 }
 .plan_lists--item {
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition: all 0.2s linear;
 }
-.plan_image {
-  flex: 1;
+.plan_lists--item:hover {
+  border: 2px solid #f53855;
+  background-color: transparent;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.05);
+}
+.plan_lists--item:hover .plan--button a {
+  background-color: #f53855;
+  color: white;
 }
 .plan .icon--check {
   padding-right: 20px;
+}
+.plan--button {
+  display: block;
+  margin: auto auto 0;
+  width: max-content;
+}
+.plan--button span {
+  color: #0b132a;
+  font-weight: 600;
+  font-size: 25px;
+}
+.plan--button a {
+  margin-top: 20px;
+  padding: 13px 63px;
+  background-color: transparent;
+}
+
+.network {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.network_title {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.network_title span {
+  display: block;
+}
+.network_desc {
+  font-size: 16px;
+  color: #4f5665;
+}
+.network_desc span {
+  font-weight: 600;
+}
+.network_image {
+  padding: 156px 0 36px;
+  margin: 0 auto;
+}
+
+.brand_links {
+  display: flex;
+  align-items: center;
+}
+.brand-item:nth-child(2) {
+  margin-left: 56px;
+}
+.brand-item:nth-child(3) {
+  margin-left: 20px;
+}
+.brand-item:nth-child(4) {
+  margin-left: 5px;
+}
+.brand-item:nth-child(5) {
+  margin-left: 60px;
+}
+
+.customer {
+  text-align: center;
+}
+.customer_title {
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.customer_title span {
+  display: block;
+}
+.customer_desc {
+  display: block;
+  margin-bottom: auto;
+  color: #4f5665;
+  font-size: 16px;
+}
+.customer_desc span {
+  display: block;
+}
+.customer_list {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+}
+.customer_item {
+  padding: 30px;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.profile_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10rem;
+}
+.profile_item:nth-child(2) {
+  font-size: 16px;
+  margin-left: 20px;
+}
+.profile_item:nth-child(2) .profile_title {
+  color: #0b132a;
+  font-weight: 600;
+}
+.profile_item:nth-child(2) span {
+  display: block;
+  font-size: 10px;
+  color: #4f5665;
+  font-weight: 400;
+}
+.profile_item:nth-child(3) {
+  margin-left: 60px;
+}
+.profile_item:nth-child(3) .profile_link {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.profile_star {
+  margin-left: 10px;
+  font-size: 12px;
+  color: rgb(235, 212, 13);
+  transform: translateY(-20%);
 }
 
 /*# sourceMappingURL=style.css.map */
