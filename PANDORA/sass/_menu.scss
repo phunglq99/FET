@@ -1,0 +1,55 @@
+.menu {
+  padding-top: 20px;
+  font-size: 13px;
+  color: $dark;
+  &-lists {
+    display: flex;
+    align-items: center;
+  }
+  &-item {
+    i {
+      margin-left: 5px;
+      width: 10px;
+      height: 10px;
+      color: $pink;
+      transform: translateY(-50%);
+    }
+    &:hover .category {
+      display: block;
+    }
+    &:hover .menu-link::before {
+      content: '';
+      width: 50%;
+      position: absolute;
+      border-top: 2px solid #fbcad4;
+      left: 5px;
+      bottom: 0;
+    }
+  }
+  &-item:not(:first-child) {
+    margin-left: 20px;
+  }
+  &-link {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    position: relative;
+  }
+}
+.category {
+  //   background-color: rgba(0, 0, 0, 0.171);
+  display: none;
+  z-index: 999;
+  &-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dark;
+  }
+  &-item {
+    padding: 15px 10px;
+  }
+}

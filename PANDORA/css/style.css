@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: white;
+  color: #27251f;
+}
+
+section[id] {
+  scroll-margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1903px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo img {
+  max-width: 170px;
+  max-height: 35px;
+}
+.header-feature {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-feature input {
+  padding: 10px 20px 10px 45px;
+  border: 1px solid #ededed;
+  outline: none;
+}
+.header-feature input::placeholder {
+  opacity: 0.5;
+}
+.header-feature .button--icon {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  padding: 12px 14px;
+  color: #27251f;
+  opacity: 0.7;
+}
+.header-icon {
+  font-size: 20px;
+  margin-left: 40px;
+  color: #ffa0c8;
+}
+.header-icon i:not(:first-child) {
+  margin-left: 25px;
+}
+.header-icon span {
+  padding-left: 5px;
+}
+
+.menu {
+  padding-top: 20px;
+  font-size: 13px;
+  color: #27251f;
+}
+.menu-lists {
+  display: flex;
+  align-items: center;
+}
+.menu-item i {
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+  color: #ffa0c8;
+  transform: translateY(-50%);
+}
+.menu-item:hover .category {
+  display: block;
+}
+.menu-item:hover .menu-link::before {
+  content: "";
+  width: 50%;
+  position: absolute;
+  border-top: 2px solid #fbcad4;
+  left: 5px;
+  bottom: 0;
+}
+.menu-item:not(:first-child) {
+  margin-left: 20px;
+}
+.menu-link {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #27251f;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.category {
+  display: none;
+  z-index: 999;
+}
+.category-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #27251f;
+}
+.category-item {
+  padding: 15px 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
