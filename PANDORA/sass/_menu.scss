@@ -1,7 +1,8 @@
 .menu {
-  padding-top: 20px;
+  padding-top: 25px;
   font-size: 13px;
   color: $dark;
+  position: relative;
   &-lists {
     display: flex;
     align-items: center;
@@ -12,44 +13,100 @@
       width: 10px;
       height: 10px;
       color: $pink;
-      transform: translateY(-50%);
+      transform: translateY(-25%);
     }
-    &:hover .category {
+    &:hover i {
+      transform: rotate(180deg);
+    }
+
+    &:hover .category-lists {
       display: block;
+      z-index: 100;
     }
-    &:hover .menu-link::before {
+    &:hover .menu-link span::before {
       content: '';
-      width: 50%;
+      width: 75%;
       position: absolute;
-      border-top: 2px solid #fbcad4;
-      left: 5px;
-      bottom: 0;
+      border-top: 2px solid $pink;
+      margin-top: 5px;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%);
+      // bottom: 10px;
     }
   }
   &-item:not(:first-child) {
     margin-left: 20px;
   }
   &-link {
-    display: inline;
     text-transform: uppercase;
     font-weight: 600;
     color: $dark;
-    display: flex;
-    align-items: center;
     padding-bottom: 15px;
-    position: relative;
+    span {
+      position: relative;
+    }
   }
 }
 .category {
-  //   background-color: rgba(0, 0, 0, 0.171);
-  display: none;
+  position: absolute;
+  width: 100%;
   z-index: 999;
+
   &-link {
     font-size: 14px;
     font-weight: 500;
     color: $dark;
   }
   &-item {
-    padding: 15px 10px;
+    margin-top: 15px;
+    padding: 30px 10px;
+    background-color: $brown;
+  }
+  &-lists {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 100%;
+  }
+}
+.header-hover {
+  &:hover .menu::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    border-top: 4px solid $pink;
+    left: 0;
+    top: 0;
+  }
+}
+
+// Colection
+.collection {
+  &-lists {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+  }
+  &-link--lists {
+    margin-bottom: auto;
+  }
+  &-link {
+    font-weight: 600;
+    display: inline-block;
+  }
+  &-link--item,
+  &-link {
+    padding-bottom: 18px;
+    color: $dark;
+  }
+  &-link--category {
+    color: $dark;
   }
 }

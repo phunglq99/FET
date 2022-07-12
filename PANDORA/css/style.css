@@ -81,6 +81,7 @@ img {
   font-size: 20px;
   margin-left: 40px;
   color: #ffa0c8;
+  cursor: pointer;
 }
 .header-icon i:not(:first-child) {
   margin-left: 25px;
@@ -90,9 +91,10 @@ img {
 }
 
 .menu {
-  padding-top: 20px;
+  padding-top: 25px;
   font-size: 13px;
   color: #27251f;
+  position: relative;
 }
 .menu-lists {
   display: flex;
@@ -103,35 +105,41 @@ img {
   width: 10px;
   height: 10px;
   color: #ffa0c8;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
 }
-.menu-item:hover .category {
+.menu-item:hover i {
+  transform: rotate(180deg);
+}
+.menu-item:hover .category-lists {
   display: block;
+  z-index: 100;
 }
-.menu-item:hover .menu-link::before {
+.menu-item:hover .menu-link span::before {
   content: "";
-  width: 50%;
+  width: 75%;
   position: absolute;
-  border-top: 2px solid #fbcad4;
-  left: 5px;
-  bottom: 0;
+  border-top: 2px solid #ffa0c8;
+  margin-top: 5px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 }
 .menu-item:not(:first-child) {
   margin-left: 20px;
 }
 .menu-link {
-  display: inline;
   text-transform: uppercase;
   font-weight: 600;
   color: #27251f;
-  display: flex;
-  align-items: center;
   padding-bottom: 15px;
+}
+.menu-link span {
   position: relative;
 }
 
 .category {
-  display: none;
+  position: absolute;
+  width: 100%;
   z-index: 999;
 }
 .category-link {
@@ -140,7 +148,50 @@ img {
   color: #27251f;
 }
 .category-item {
-  padding: 15px 10px;
+  margin-top: 15px;
+  padding: 30px 10px;
+  background-color: #f5f5f5;
+}
+.category-lists {
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.header-hover:hover .menu::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  border-top: 4px solid #ffa0c8;
+  left: 0;
+  top: 0;
+}
+
+.collection-lists {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+.collection-item {
+  display: flex;
+  flex-direction: column;
+}
+.collection-link--lists {
+  margin-bottom: auto;
+}
+.collection-link {
+  font-weight: 600;
+  display: inline-block;
+}
+.collection-link--item, .collection-link {
+  padding-bottom: 18px;
+  color: #27251f;
+}
+.collection-link--category {
+  color: #27251f;
 }
 
 /*# sourceMappingURL=style.css.map */

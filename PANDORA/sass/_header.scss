@@ -27,7 +27,6 @@
     .button--icon {
       position: absolute;
       left: 0;
-      //   transform: translate(50%, 50%);
       font-size: 14px;
       padding: 12px 14px;
       color: $dark;
@@ -38,6 +37,7 @@
     font-size: 20px;
     margin-left: 40px;
     color: $pink;
+    cursor: pointer;
     i:not(:first-child) {
       margin-left: 25px;
     }
