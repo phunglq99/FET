@@ -1,0 +1,19 @@
+.categories {
+  padding-top: 145px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  &-title {
+    max-width: 300px;
+    margin-left: 86px;
+  }
+  &-lists {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 68px;
+  }
+  &-item {
+    border: 1px solid $dark-blur;
+    max-width: 130px;
+  }
+}

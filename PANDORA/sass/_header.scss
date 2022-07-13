@@ -3,6 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &-hover {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 10px 15px;
+    z-index: 99;
+  }
   &-logo {
     img {
       max-width: 170px;

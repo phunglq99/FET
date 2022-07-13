@@ -1,0 +1,41 @@
+.story {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 46px;
+  &-lists {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 22px;
+  }
+  &-item {
+    border: 1px solid $dark-blur;
+    &:hover .categories-name span::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 15px;
+      border: 1px solid $pink;
+    }
+    &:hover {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+  &-title {
+    padding-left: 40px;
+    span {
+      display: block;
+      color: $dark;
+      font-weight: 600;
+      font-size: 12px;
+      padding-bottom: 25px;
+    }
+    h2 {
+      padding-bottom: 30px;
+    }
+  }
+}

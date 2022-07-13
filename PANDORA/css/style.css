@@ -45,11 +45,57 @@ img {
   margin: 0 auto;
 }
 
+.button {
+  padding: 13px 27px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.button--outline {
+  background-color: white;
+}
+.button--dark {
+  background-color: #27251f;
+  color: white;
+}
+
+.categories-name {
+  text-align: center;
+}
+.categories-name span {
+  display: inline-block;
+  padding: 11px 0 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  color: #27251f;
+  position: relative;
+}
+.categories-name span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  border: 1px solid #fbcad4;
+}
+
 .header {
   padding: 20px 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header-hover {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px 15px;
+  z-index: 99;
 }
 .header-logo img {
   max-width: 170px;
@@ -192,6 +238,174 @@ img {
 }
 .collection-link--category {
   color: #27251f;
+}
+
+.categories {
+  padding-top: 145px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.categories-title {
+  max-width: 300px;
+  margin-left: 86px;
+}
+.categories-lists {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 68px;
+}
+.categories-item {
+  border: 1px solid rgba(39, 37, 31, 0.1882352941);
+  max-width: 130px;
+}
+
+.banner {
+  padding-bottom: 60px;
+}
+.banner-image {
+  background-image: url(//theme.hstatic.net/200000103143/1000799780/14/new_index_slider_1_grande.jpg?v=2624);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  object-fit: contain;
+  position: relative;
+}
+
+.slick-track .banner-image {
+  height: 700px;
+  cursor: pointer;
+}
+.slick-track .banner-link {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.story {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 46px;
+}
+.story-lists {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px;
+}
+.story-item {
+  border: 1px solid rgba(39, 37, 31, 0.1882352941);
+}
+.story-item:hover .categories-name span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  border: 1px solid #ffa0c8;
+}
+.story-item:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.story-title {
+  padding-left: 40px;
+}
+.story-title span {
+  display: block;
+  color: #27251f;
+  font-weight: 600;
+  font-size: 12px;
+  padding-bottom: 25px;
+}
+.story-title h2 {
+  padding-bottom: 30px;
+}
+
+.trend {
+  padding-left: 80px;
+}
+.trend-title {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.trend-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trend-item {
+  width: calc(20% - 4px);
+  border: 1px solid black;
+  position: relative;
+}
+.trend-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(39, 37, 31, 0.1882352941);
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+  z-index: 5;
+}
+.trend-item:hover .trend-image--show:last-child {
+  visibility: visible;
+}
+.trend-item:hover .trend-image::before {
+  visibility: visible;
+}
+.trend-item:hover::before {
+  visibility: visible;
+}
+.trend-image {
+  position: relative;
+}
+.trend-image::before {
+  content: "MUA NGAY";
+  position: absolute;
+  display: inline-block;
+  z-index: 4;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: #212121;
+  color: #fff;
+  padding: 7px 25px 5px;
+  font-weight: 500;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 1;
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+.trend-image--show:last-child {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #f5f5f5;
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+}
+.trend-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trend-desc {
+  text-align: center;
+  padding: 60px 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
