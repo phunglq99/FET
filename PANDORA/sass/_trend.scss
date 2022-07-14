@@ -1,21 +1,38 @@
 .trend {
   padding-left: 80px;
-
+  padding-bottom: 150px;
   &-title {
     text-transform: uppercase;
     padding-bottom: 20px;
   }
-
+  &-icon {
+    padding: 15px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    font-size: 23px;
+    color: $dark;
+  }
   &-lists {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    &:hover .trend-next {
+      visibility: visible;
+    }
+    &:hover .trend-prev {
+      z-index: 1;
+    }
   }
 
   &-item {
-    width: calc(20% - 4px);
-    border: 1px solid black;
+    // width: calc(20% - 4px);
+    max-width: 270px;
+    margin-left: 5px;
+    border: 1px solid $dark-blur;
     position: relative;
+
     &::before {
       content: '';
       width: 100%;
@@ -23,10 +40,14 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-color: $dark-blur;
+      background-color: rgb(167 164 156 / 19%);
       visibility: hidden;
       transition: all 0.1s ease-in-out;
-      z-index: 5;
+      z-index: 3;
+    }
+    &:hover .trend-icon {
+      z-index: 4;
+      cursor: pointer;
     }
     &:hover .trend-image--show:last-child {
       visibility: visible;
@@ -35,6 +56,9 @@
       visibility: visible;
     }
     &:hover::before {
+      visibility: visible;
+    }
+    &:hover .trend-prev {
       visibility: visible;
     }
   }
@@ -57,7 +81,6 @@
       visibility: hidden;
       opacity: 1;
       border: none;
-      transition: all 0.1s ease-in-out;
     }
   }
 
@@ -70,7 +93,7 @@
     height: 100%;
     object-fit: cover;
     background-color: #f5f5f5;
-    transition: all 0.1s ease-in-out;
+    // transition: all 0.1s ease-in-out;
     z-index: 1;
   }
 
@@ -78,9 +101,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f6f6f6;
+    transition: all 0.2s ease-in-out;
   }
   &-desc {
+    display: block;
     text-align: center;
-    padding: 60px 0 10px;
+    margin: 40px 0 10px;
+    color: $dark;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+  &-price {
+    font-size: 14px;
+    color: $dark;
+    padding-bottom: 20px;
+  }
+}
+
+// slick customize
+.trend {
+  &-prev {
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    bottom: 33px;
+    transform: translateY(calc(-50% - 30px));
+    z-index: 0;
+  }
+  &-next {
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    bottom: 33px;
+    transform: translateY(calc(-50% - 30px));
+    visibility: hidden;
+  }
+}
+.slick-dots {
+  display: flex !important;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0 15px;
+  transform: translateY(50%);
+  button {
+    font-size: 0;
+    background-color: $dark-blur;
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    transition: all 0.2s linear;
+    border: none;
+    cursor: pointer;
+  }
+  .slick-active button {
+    background-color: $dark;
   }
 }
