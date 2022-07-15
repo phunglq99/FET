@@ -39,9 +39,12 @@
       position: absolute;
       left: 0;
       font-size: 14px;
-      padding: 12px 14px;
+      padding: 10px 14px;
       color: $dark;
       opacity: 0.7;
+      border: 1px solid #ededed;
+      border-right: none;
+      z-index: 1;
     }
   }
   &-icon {
@@ -55,5 +58,36 @@
     span {
       padding-left: 5px;
     }
+  }
+}
+
+// search
+.form-search {
+  position: relative;
+}
+.search {
+  &-input:focus ~ .search-lists {
+    display: unset;
+    top: 37px;
+  }
+  // &-history {
+  //   border-bottom: 1px solid black;
+  //   display: none;
+  // }
+  &-lists {
+    width: 100%;
+    padding: 14px 70px 10px 47px;
+    margin-top: 2px;
+    background-color: #ededed;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+  &-item {
+    padding-bottom: 10px;
+  }
+  &-link {
+    color: $dark;
   }
 }
