@@ -1,0 +1,72 @@
+.footer {
+  margin-top: 60px;
+  padding-top: 65px;
+  background-color: $brown;
+  &-email {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &_lists {
+      display: flex;
+      align-items: center;
+    }
+    &_item {
+      margin-right: 20px;
+    }
+    &_link {
+      font-size: 20px;
+      color: $dark;
+    }
+  }
+  &-letter {
+    &_desc {
+      font-size: 14px;
+      padding: 15px 0;
+    }
+    &_input {
+      position: relative;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      outline: none;
+    }
+    i {
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      padding: 14px 25px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &-introduce {
+    padding-top: 78px;
+    &_lists {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0 120px;
+    }
+    &_item {
+      display: flex;
+      flex-direction: column;
+    }
+    &_link {
+      color: $dark;
+      padding-bottom: 10px;
+      font-size: 12px;
+      h4 {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  &-copyright {
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

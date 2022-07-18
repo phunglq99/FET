@@ -67,7 +67,7 @@
 }
 .search {
   &-input:focus ~ .search-lists {
-    display: unset;
+    display: block;
     top: 37px;
   }
   // &-history {
@@ -90,4 +90,16 @@
   &-link {
     color: $dark;
   }
+}
+.bg-white {
+  background-color: white;
+}
+.bg-trans {
+  background-color: transparent;
+}
+.hide {
+  display: none !important;
+}
+.bg-white {
+  background-color: transparent;
 }

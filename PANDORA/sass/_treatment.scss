@@ -1,0 +1,45 @@
+.treatment {
+  padding: 100px 0;
+  text-align: center;
+  max-width: 1440px;
+  max-height: 287px;
+  margin: 0 auto;
+  border: 5px solid $pink-blur;
+  &-content {
+    margin-bottom: 60px;
+    h1 {
+      padding-bottom: 35px;
+    }
+    a {
+      color: $dark;
+      font-size: 16px;
+    }
+  }
+  &-prev {
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid $dark-blur;
+    background-color: white;
+    left: 0;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    position: absolute;
+  }
+  &-next {
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid $dark-blur;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -50%);
+  }
+}
