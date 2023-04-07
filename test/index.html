@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css">
+    <title>Bootstrap Example</title>
+    
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="wrapper d-flex">
+          <div class="sidebar position-fixed top-0 bottom-0">
+              <div class="sidebar-logo">
+                  <img src="https://coderthemes.com/hyper/saas/assets/images/logo.png" alt="">
+              </div>
+              <ul id="sideBar" class="sidebar-nav list-unstyled mt-2">
+                <!-- Navigation  -->
+                <li class="sidebar-nav__section text-sidebar text-uppercase">Navigation</li>
+                <li class="sidebar-nav__item" id="sidebarItem1" >
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar1" aria-expanded="true" aria-controls="collapseSidebar1">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first sidebar-item__active">  Dashboards </span>
+                    <span class="me-3 sidebar-noti">5</span>
+                  </a>
+                  <div id="collapseSidebar1" class="collapse show" aria-labelledby="sidebarItem1" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li class="sidebar-item__active">Analytics</li>
+                      <li>Ecommerce</li>
+                      <li>Projects</li>
+                      <li>CRM</li>
+                      <li>E-Wallet</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- Apps -->
+                <li class="sidebar-nav__section text-sidebar text-uppercase">Apps</li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> Calendar </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> Chat </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first text-uppercase"> Crm </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem2">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar2" aria-expanded="false" aria-controls="collapseSidebar2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Ecommerce </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar2" class="collapse" aria-labelledby="sidebarItem2" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Products</li>
+                      <li>Products Details</li>
+                      <li>Orders</li>
+                      <li>Orders Details</li>
+                      <li>Customers</li>
+                      <li>Shopping Cart</li>
+                      <li>Checkout</li>
+                      <li>Sellers</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem3">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar3" aria-expanded="false" aria-controls="collapseSidebar3">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Email </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar3" class="collapse" aria-labelledby="sidebarItem3" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Inbox</li>
+                      <li>Read Email</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem4">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar4" aria-expanded="false" aria-controls="collapseSidebar4">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Email </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar4" class="collapse" aria-labelledby="sidebarItem4" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>List</li>
+                      <li>Detail</li>
+                      <li>Gaintt</li>
+                      <li>Create Project</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> Social Feed </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem5">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar5" aria-expanded="false" aria-controls="collapseSidebar5">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Tasks </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar5" class="collapse" aria-labelledby="sidebarItem5" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>List</li>
+                      <li>Details</li>
+                      <li>Kanban Board</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> File Manager </span>
+                  </a>
+                </li>
+
+                <!-- Custom -->
+                <li class="sidebar-nav__section text-sidebar text-uppercase">Custom</li>
+                <li class="sidebar-nav__item" id="sidebarItem6">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar6" aria-expanded="false" aria-controls="collapseSidebar6">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Pages </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar6" class="collapse" aria-labelledby="sidebarItem6" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Profile</li>
+                      <li>Profile 2</li>
+                      <li>Invoice</li>
+                      <li>FAQ</li>
+                      <li>Pricing</li>
+                      <li>Maintenance</li>
+                      <li>Authentication</li>
+                      <li>Error</li>
+                      <li>Starter Page</li>
+                      <li>With Preloader</li>
+                      <li>Timeline</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> Landing </span>
+                    <span class="text-white py-1 px-2 bg-secondary lh-sm rounded-3 me-3 fw-bold" style="font-size: 11px"> New </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem7">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar7" aria-expanded="false" aria-controls="collapseSidebar7">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Layouts </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar7" class="collapse" aria-labelledby="sidebarItem7" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Horizontal</li>
+                      <li>Detached</li>
+                      <li>Full View</li>
+                      <li>Fullscreen View</li>
+                      <li>Hover Menu</li>
+                      <li>Compact</li>
+                      <li>Icon View</li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- Components -->
+                <li class="sidebar-nav__section text-sidebar text-uppercase">Components</li>
+                <li class="sidebar-nav__item" id="sidebarItem8">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar8" aria-expanded="false" aria-controls="collapseSidebar8">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Base UI </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar8" class="collapse" aria-labelledby="sidebarItem8" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Accordions & Collapse</li>
+                      <li>Alerts</li>
+                      <li>Avatars</li>
+                      <li>Badges</li>
+                      <li>Breadcrumb</li>
+                      <li>Buttons</li>
+                      <li>Cards</li>
+                      <li>Carousel</li>
+                      <li>Dropdowns</li>
+                      <li>Embed Video</li>
+                      <li>Grid</li>
+                      <li>List Group</li>
+                      <li>Modals</li>
+                      <li>Notifications</li>
+                      <li>Offcanvas</li>
+                      <li>Placeholders</li>
+                      <li>Pagination</li>
+                      <li>Popovers</li>
+                      <li>Progress</li>
+                      <li>Ribbons</li>
+                      <li>Spinners</li>
+                      <li>Tabs</li>
+                      <li>Tooltips</li>
+                      <li>Typography</li>
+                      <li>Utilities</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem9">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar9" aria-expanded="false" aria-controls="collapseSidebar9">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Extended UI </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar9" class="collapse" aria-labelledby="sidebarItem9" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Dragula</li>
+                      <li>Range Slider</li>
+                      <li>Ratings</li>
+                      <li>Scrollbar</li>
+                      <li>Scrollspy</li>
+                      <li>Treeview</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first"> Widgets </span>
+                    <span class="text-white py-1 px-2 bg-secondary lh-sm rounded-3 me-3 fw-bold" style="font-size: 11px"> New </span>
+                  </a>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem10">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar10" aria-expanded="false" aria-controls="collapseSidebar10">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Icons </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar10" class="collapse" aria-labelledby="sidebarItem10" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Remix Icons</li>
+                      <li>Material Design</li>
+                      <li>Unicons</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem11">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar11" aria-expanded="false" aria-controls="collapseSidebar11">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Charts </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar11" class="collapse" aria-labelledby="sidebarItem11" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Apex Charts</li>
+                      <li>ChartsJS</li>
+                      <li>Britecharts</li>
+                      <li>Sparklines</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem12">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar12" aria-expanded="false" aria-controls="collapseSidebar12">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Forms </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar12" class="collapse" aria-labelledby="sidebarItem12" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Basic Elements</li>
+                      <li>Form Advanced</li>
+                      <li>Validation</li>
+                      <li>Wizard</li>
+                      <li>File Uploads</li>
+                      <li>Editors</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem13">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar13" aria-expanded="false" aria-controls="collapseSidebar13">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Tables </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar13" class="collapse" aria-labelledby="sidebarItem13" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Basic Tables</li>
+                      <li>Data Tables</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem14">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar14" aria-expanded="false" aria-controls="collapseSidebar14">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Maps </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar14" class="collapse" aria-labelledby="sidebarItem14" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Google Maps</li>
+                      <li>Vector Maps</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-nav__item" id="sidebarItem15">
+                  <a href="#" class="sidebar-nav__link text-decoration-none d-flex py-2" data-bs-toggle="collapse" data-bs-target="#collapseSidebar15" aria-expanded="false" aria-controls="collapseSidebar15">
+                    <span class="sidebar-nav__icon flex-shrink-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                      </svg>
+                    </span>
+                    <span class="sidebar-nav__first">  Multi Level </span>
+                    <span class="sidebar-nav__icon-more"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg></span>
+                  </a>
+                  <div id="collapseSidebar15" class="collapse" aria-labelledby="sidebarItem15" data-bs-parent="#sideBar">
+                    <ul class="sidebar-nav__second text-sidebar__item">
+                      <li>Second Level</li>
+                      <li>Third Level</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+    <!-- Nav -->
+          <nav class="navbar navbar-light bg-light px-2 w-100 container-fluid" style="height: 73px;">
+            <div class="d-flex align-items-center gap-lg-2 gap-1">
+              <div class="button-toogle-menu">
+                <span class="inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg></span>
+              </div>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+
+            <ul class="nav-bar__menu d-flex align-items-center gap-3 ps-4">
+                <li class="dropdown">
+                  <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <img src="https://coderthemes.com/hyper/saas/assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
+                    <span class="align-middle d-none d-lg-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                  </a>
+                </li>
+                <li class="dropdown">
+                  <a class="nav-link arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                    </svg></span>
+                    <span class="noti-icon-badge-cus"></span>
+                </a>
+                </li>
+                <li class="dropdown d-none d-sm-inline-block">
+                  <a class="nav-link arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+                      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                    </svg></span>
+                </a>
+                </li>
+                <li class="dropdown d-sm-inline-block">
+                    <a class="nav-link" data-bs-toggle="offcanvas" href="#" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                        </svg>
+                      </span>
+                  </a>
+                </li>
+                <li class="d-sm-inline-block">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                    </svg>
+                  </span>
+                </li>
+                <li>
+                  <a class="nav-link" href="#" data-toggle="fullscreen">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
+                        <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li></li>
+                <li></li>
+            </ul>
+          </nav>
+    </div>
+    <script>
+      var btn = document.querySelector('[data-toggle="fullscreen"]');
+    
+      btn.addEventListener('click', function() {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          document.documentElement.requestFullscreen();
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
