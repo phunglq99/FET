@@ -10,12 +10,45 @@ body {
     background-color: #fafbfe;
 }
 
+.close {
+    .sidebar {
+        width: 70px !important;
+        .sidebar-nav__first,
+        .sidebar-nav__section,
+        .sidebar-noti,
+        .sidebar-nav__icon-more,
+        .sidebar-noti__new,
+        .sidebar-nav__second > li  {
+            display: none;
+        }
+
+        .sidebar-logo {
+            width: 70px;
+            padding: 24px 20px 27px;
+        }
+
+        .sidebar-logo__sm {
+            display: block;
+        }
+
+        .sidebar-logo__lg {
+            display: none;
+        }
+    }
+
+        // toggle navbar
+        .navbar-container {
+            margin-left: 70px ;
+        }
+}
+
 .sidebar {
-    margin-top: 73px;
+    margin-top: 70px;
     overflow-y: auto;
     width: 260px;
     max-height: 100vh;
     background-color: $bg-sidebar;
+    transition: all 0.25s ease-in-out;
 
     &::-webkit-scrollbar {
         width: 8px;
@@ -39,6 +72,13 @@ body {
         &::-webkit-scrollbar-track,
         &::-webkit-scrollbar-thumb {
             visibility: visible;
+        }
+    }
+    // click toggle
+    .sidebar-logo {
+        transition: all 0.25s ease-in-out;
+        &__sm {
+            display: none;
         }
     }
 
@@ -102,6 +142,13 @@ body {
 
         &__item {
             padding: 15px 10px;
+
+            a[aria-expanded="true"] {
+                .sidebar-nav__first {
+                    color: white;
+                }
+            }
+
         }
 
         &__first {
@@ -145,24 +192,169 @@ body {
 
 
 
+
+
 /* for navbar */
 
 /* for main section */
-
-.navbar {
+.navbar-container {
     margin-left: 260px;
+    transition: all 0.25s ease-in-out;
+}
+.navbar {
 
     .noti-icon-badge-cus::after {
         content: '';
         display: inline-block;
         position: absolute;
-        top: 0;
+        top: 26px;
         right: 1px;
         border-radius: 50%;
         height: 7px;
         width: 7px;
         background-color: #fa5c7c;
     }
+
+    &-dropdown {
+        &__icon-item {
+            font-size: 14px;
+            text-decoration: none;
+            border-radius: 3px;
+            line-height: 34px;
+            text-align: center;
+            padding: 15px 22px 9px;
+            display: block;
+            border: 1px solid transparent;
+            color: $body-color;
+
+            &:hover {
+                background-color: #f6f7fb;
+                color: #313a46;
+            }
+
+            & > img {
+            width: 28px;
+            height: 24px;
+            }
+
+            & > span {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .dropdown {
+        & > a.show {
+            color: blue;
+        }
+    }
+}
+
+//notification
+
+.dropdown-scroll__cus {
+    max-width: 320px;
+    max-height: 392px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        visibility: hidden;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;
+        visibility: hidden;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $text-sidebar;
+        border-radius: 12px;
+        border: 2px solid white;
+        visibility: hidden;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-track,
+        &::-webkit-scrollbar-thumb {
+            visibility: visible;
+        }
+    }
+}
+
+.simplebar-content-wrapper {
+    .simplebar-content:before {
+        content: '';
+        display: table;
+    }
+
+    .notify-icon {
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+    }
+
+    .noti-item-title {
+        font-size: 14px;
+        margin: 0 0 8px;
+    }
+
+    .noti-item-subtitle  {
+        line-height: 10px;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .font-13 {
+        font-size: 13px;
+    }
+
+    .card-body {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+}
+
+.dropdown-item__loading {
+    & > svg {
+        animation: circle-animation 2s infinite linear;
+    }
+}
+
+
+
+@keyframes circle-animation {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+//acount
+.person-title {
+    font-weight: 700;
+    color: $body-color;
+    font-size: 12px;
+    line-height: calc(13/12);
+}
+
+.dropdown-person__text {
+    color: $body-color;
+    font-size: 14px;
+    line-height: calc(22/14);
+    font-weight: 400;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 70px;
 }
 
 .button-toogle-menu {
@@ -179,6 +371,24 @@ body {
     
 }
 
+.dropdown-menu-animated {
+    animation-name: dropDown;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    position: absolute;
+    margin: 0;
+    z-index: 1000;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 #menu-btn {
     background-color: #7952b3;
     color: #fff;

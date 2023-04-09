@@ -58,12 +58,38 @@ body {
   background-color: #fafbfe;
 }
 
+.close .sidebar {
+  width: 70px !important;
+}
+.close .sidebar .sidebar-nav__first,
+.close .sidebar .sidebar-nav__section,
+.close .sidebar .sidebar-noti,
+.close .sidebar .sidebar-nav__icon-more,
+.close .sidebar .sidebar-noti__new,
+.close .sidebar .sidebar-nav__second > li {
+  display: none;
+}
+.close .sidebar .sidebar-logo {
+  width: 70px;
+  padding: 24px 20px 27px;
+}
+.close .sidebar .sidebar-logo__sm {
+  display: block;
+}
+.close .sidebar .sidebar-logo__lg {
+  display: none;
+}
+.close .navbar-container {
+  margin-left: 70px;
+}
+
 .sidebar {
-  margin-top: 73px;
+  margin-top: 70px;
   overflow-y: auto;
   width: 260px;
   max-height: 100vh;
   background-color: #313a46;
+  transition: all 0.25s ease-in-out;
 }
 .sidebar::-webkit-scrollbar {
   width: 8px;
@@ -81,6 +107,12 @@ body {
 }
 .sidebar:hover::-webkit-scrollbar, .sidebar:hover::-webkit-scrollbar-track, .sidebar:hover::-webkit-scrollbar-thumb {
   visibility: visible;
+}
+.sidebar .sidebar-logo {
+  transition: all 0.25s ease-in-out;
+}
+.sidebar .sidebar-logo__sm {
+  display: none;
 }
 .sidebar-logo {
   padding: 24px 59px;
@@ -129,6 +161,9 @@ body {
 .sidebar-nav__item {
   padding: 15px 10px;
 }
+.sidebar-nav__item a[aria-expanded=true] .sidebar-nav__first {
+  color: white;
+}
 .sidebar-nav__first {
   font-size: 15px;
   font-weight: 500;
@@ -165,19 +200,129 @@ body {
 
 /* for navbar */
 /* for main section */
-.navbar {
+.navbar-container {
   margin-left: 260px;
+  transition: all 0.25s ease-in-out;
 }
+
 .navbar .noti-icon-badge-cus::after {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 26px;
   right: 1px;
   border-radius: 50%;
   height: 7px;
   width: 7px;
   background-color: #fa5c7c;
+}
+.navbar-dropdown__icon-item {
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+  line-height: 34px;
+  text-align: center;
+  padding: 15px 22px 9px;
+  display: block;
+  border: 1px solid transparent;
+  color: #6c757d;
+}
+.navbar-dropdown__icon-item:hover {
+  background-color: #f6f7fb;
+  color: #313a46;
+}
+.navbar-dropdown__icon-item > img {
+  width: 28px;
+  height: 24px;
+}
+.navbar-dropdown__icon-item > span {
+  white-space: nowrap;
+}
+.navbar .dropdown > a.show {
+  color: blue;
+}
+
+.dropdown-scroll__cus {
+  max-width: 320px;
+  max-height: 392px;
+  overflow-y: auto;
+}
+.dropdown-scroll__cus::-webkit-scrollbar {
+  width: 8px;
+  visibility: hidden;
+}
+.dropdown-scroll__cus::-webkit-scrollbar-track {
+  background: white;
+  visibility: hidden;
+}
+.dropdown-scroll__cus::-webkit-scrollbar-thumb {
+  background-color: #8391a2;
+  border-radius: 12px;
+  border: 2px solid white;
+  visibility: hidden;
+}
+.dropdown-scroll__cus:hover::-webkit-scrollbar, .dropdown-scroll__cus:hover::-webkit-scrollbar-track, .dropdown-scroll__cus:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.simplebar-content-wrapper .simplebar-content:before {
+  content: "";
+  display: table;
+}
+.simplebar-content-wrapper .notify-icon {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+}
+.simplebar-content-wrapper .noti-item-title {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+.simplebar-content-wrapper .noti-item-subtitle {
+  line-height: 10px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.simplebar-content-wrapper .font-13 {
+  font-size: 13px;
+}
+.simplebar-content-wrapper .card-body {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.dropdown-item__loading > svg {
+  animation: circle-animation 2s infinite linear;
+}
+
+@keyframes circle-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.person-title {
+  font-weight: 700;
+  color: #6c757d;
+  font-size: 12px;
+  line-height: 1.0833333333;
+}
+
+.dropdown-person__text {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.5714285714;
+  font-weight: 400;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 70px;
 }
 
 .button-toogle-menu {
@@ -191,6 +336,23 @@ body {
   height: 36px;
 }
 
+.dropdown-menu-animated {
+  animation-name: dropDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  position: absolute;
+  margin: 0;
+  z-index: 1000;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 #menu-btn {
   background-color: #7952b3;
   color: #fff;
