@@ -7,18 +7,18 @@
 }
 
 body {
-    background-color: #fafbfe;
+    background-color: #e5e7ed;
 }
 
 .close {
     .sidebar {
-        width: 70px !important;
+
         .sidebar-nav__first,
         .sidebar-nav__section,
         .sidebar-noti,
         .sidebar-nav__icon-more,
         .sidebar-noti__new,
-        .sidebar-nav__second > li  {
+        .sidebar-nav__second {
             display: none;
         }
 
@@ -34,18 +34,30 @@ body {
         .sidebar-logo__lg {
             display: none;
         }
+
+        .sidebar-nav__link {
+            &:hover + .collapse > .sidebar-nav__second{
+                display: block !important;
+                // position: absolute;
+                // left: 80px;
+            }
+        }
     }
 
         // toggle navbar
         .navbar-container {
             margin-left: 70px ;
         }
+
+        // Main content
+        .main-content {
+            margin-left: 70px;
+        }
 }
 
 .sidebar {
     margin-top: 70px;
     overflow-y: auto;
-    width: 260px;
     max-height: 100vh;
     background-color: $bg-sidebar;
     transition: all 0.25s ease-in-out;
@@ -87,7 +99,7 @@ body {
         text-align: center;
         position: fixed;
         top: 0;
-        width: 260px;
+        width: 249px;
         background-color: $bg-sidebar;
 
         img {
@@ -106,6 +118,8 @@ body {
     &-nav {
 
         &__link {
+            justify-content: space-between;
+            gap: 0 30px;
             color: $text-sidebar;
             transition: all 0.25s ease-in-out;
 
@@ -141,7 +155,7 @@ body {
         }
 
         &__item {
-            padding: 15px 10px;
+            padding: 15px 11px 15px 1px;
 
             a[aria-expanded="true"] {
                 .sidebar-nav__first {
@@ -159,7 +173,7 @@ body {
         }
 
         &__second {
-            padding-left: 50px;
+            padding-left: 79px;
 
             & > li {
                 padding: 9px 0;
@@ -198,9 +212,10 @@ body {
 
 /* for main section */
 .navbar-container {
-    margin-left: 260px;
+    margin-left: 249px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.25s ease-in-out;
-}
+
 .navbar {
 
     .noti-icon-badge-cus::after {
@@ -325,8 +340,6 @@ body {
     }
 }
 
-
-
 @keyframes circle-animation {
     from {
         transform: rotate(0deg)
@@ -358,10 +371,11 @@ body {
 }
 
 .button-toogle-menu {
-    padding: 0 36px;
+    padding-right: 30px;
 
     span {
         padding: 1px 6px;
+        cursor: pointer;
 
         & > svg {
             width: 24px;
@@ -389,11 +403,53 @@ body {
         transform: translateY(0);
     }
 }
-#menu-btn {
-    background-color: #7952b3;
-    color: #fff;
 }
 
-#menu-btn:focus {
-    box-shadow: 0 0 0 0.25rem #7952b344;
+/* ----------------------------------------*/
+// Main content
+.main-content {
+    margin-top: 90px;
+    margin-left: 249px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* ----------------------------------------*/
+// Reponsive
+
+@include media-breakpoint-down(xl) { 
+    .sidebar {
+        width: 70px;
+
+        .sidebar-nav__first,
+        .sidebar-nav__section,
+        .sidebar-noti,
+        .sidebar-nav__icon-more,
+        .sidebar-noti__new,
+        .sidebar-nav__second > li  {
+            display: none;
+        }
+
+        .sidebar-logo {
+            width: 70px;
+            padding: 24px 20px 27px;
+        }
+
+        .sidebar-logo__sm {
+            display: block;
+        }
+
+        .sidebar-logo__lg {
+            display: none;
+        }
+    }
+
+    // toggle navbar
+    .navbar-container {
+        margin-left: 70px ;
+    }
+
+    // Main content
+    .main-content {
+        margin-left: 70px;
+    }
 }
